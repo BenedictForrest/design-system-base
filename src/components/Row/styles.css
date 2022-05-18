@@ -1,0 +1,48 @@
+.row {
+    align-items: start;
+    display: flex;
+    padding-block-start: 0.5rem;
+    padding-inline-start: 3.5rem;
+    padding-inline-end: 3.5rem;
+    position: relative;
+}
+
+.row__wrapper {
+    padding: 0.125rem 0.25rem;
+}
+
+.row__actions {
+    display: flex;
+    inset-inline-start: 0.5rem;
+    opacity: 0;
+    padding-block-start: 0.125rem;
+    padding-block-end: 0.125rem;
+    padding-inline-end: 0.5rem;
+    position: absolute;
+    transition: opacity 0.4s ease;
+}
+.row:hover .row__actions {
+    opacity: 1;
+}
+
+.row__button {
+    appearance: none;
+    border: none;
+    border-radius: 0.25rem;
+    box-shadow: none;
+    background: none;
+    cursor: grab;
+    display: block;
+    margin: 0;
+    outline: none;
+    padding: 0;
+}
+
+.row__button:hover {
+    background-color: #f6f5f7;
+}
+
+.row__icon {
+    display: block;
+    fill: #757085;
+}

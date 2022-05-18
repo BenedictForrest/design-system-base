@@ -1,13 +1,77 @@
 body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+    margin: 4rem;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto",
+        "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans",
+        "Helvetica Neue", sans-serif;
+    font-size: 1rem;
+    line-height: 1.5rem;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+    font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+        monospace;
+}
+
+.wrapper {
+    margin-inline-start: auto;
+    margin-inline-end: auto;
+    max-inline-size: 47rem;
+    padding-block-start: 8rem;
+    padding-block-end: 8rem;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+    margin-block: 0;
+}
+
+h1 {
+    font-size: 2.5rem;
+    line-height: 3rem;
+}
+
+h2 {
+    font-size: 2rem;
+    line-height: 2.5rem;
+}
+
+h3 {
+    font-size: 1.5rem;
+    line-height: 2rem;
+}
+
+h4 {
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+}
+
+table {
+    border-collapse: collapse;
+    font-size: 0.875rem;
+    margin-block-end: 1rem;
+}
+
+th,
+td {
+    border-block-end: thin solid #ccc;
+    padding: 0.5rem 2rem 0.5rem 0.5rem;
+    text-align: start;
+}
+
+.row {
+    display: flex;
+}
+.row > div {
+    width: 50%;
+}
+
+label {
+    margin-inline-end: 0.5rem;
 }
