@@ -1,5 +1,12 @@
+html,
+body,
+#root,
+.layout {
+    block-size: 100%;
+}
+
 body {
-    margin: 4rem;
+    margin: 0;
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto",
         "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans",
         "Helvetica Neue", sans-serif;
@@ -9,69 +16,67 @@ body {
     -moz-osx-font-smoothing: grayscale;
 }
 
-code {
-    font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-        monospace;
+.layout {
+    display: grid;
+    grid-template:
+        "nav          top-bar       top-bar  top-bar" min-content
+        "nav          sidebar-left  header   sidebar-right" min-content
+        "nav          sidebar-left  main     sidebar-right" 1fr
+        "nav          sidebar-left  footer   sidebar-right" min-content
+        / min-content min-content 1fr min-content;
 }
 
-.wrapper {
-    margin-inline-start: auto;
-    margin-inline-end: auto;
-    max-inline-size: 47rem;
-    padding-block-start: 8rem;
-    padding-block-end: 8rem;
+.nav {
+    background-color: #392aa7;
+    grid-area: nav;
+    inline-size: 3.5rem;
+    transition: inline-size 200ms ease-in-out;
+}
+.nav.open {
+    inline-size: 20rem;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p {
-    margin-block: 0;
+.top-bar {
+    block-size: 4.25rem;
+    border-block-end: thin solid #e7ecf3;
+    box-sizing: border-box;
+    grid-area: top-bar;
 }
 
-h1 {
-    font-size: 2.5rem;
-    line-height: 3rem;
+.sidebar-left,
+.sidebar-right {
+    box-sizing: border-box;
+    inline-size: 20rem;
+}
+.sidebar-left {
+    border-inline-end: thin solid #e7ecf3;
+    grid-area: sidebar-left;
 }
 
-h2 {
-    font-size: 2rem;
-    line-height: 2.5rem;
+.sidebar-right {
+    border-inline-start: thin solid #e7ecf3;
+    grid-area: sidebar-right;
+    transition: inline-size 200ms ease-in-out;
+}
+.sidebar-right.closed {
+    width: 4rem;
 }
 
-h3 {
-    font-size: 1.5rem;
-    line-height: 2rem;
+.header {
+    block-size: 4.25rem;
+    border-block-end: thin solid #e7ecf3;
+    box-sizing: border-box;
+    grid-area: header;
 }
 
-h4 {
-    font-size: 1.25rem;
-    line-height: 1.75rem;
+.main {
+    grid-area: main;
+    overflow: auto;
 }
 
-table {
-    border-collapse: collapse;
-    font-size: 0.875rem;
-    margin-block-end: 1rem;
-}
-
-th,
-td {
-    border-block-end: thin solid #ccc;
-    padding: 0.5rem 2rem 0.5rem 0.5rem;
-    text-align: start;
-}
-
-.row {
-    display: flex;
-}
-.row > div {
-    width: 50%;
-}
-
-label {
-    margin-inline-end: 0.5rem;
+.footer {
+    block-size: 4.25rem;
+    border-block-start: thin solid #e7ecf3;
+    box-sizing: border-box;
+    grid-area: footer;
 }
