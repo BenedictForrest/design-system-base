@@ -1,79 +1,21 @@
-import Nav from "./Nav"
-import SidebarRight from "./Sidebar"
+import Button from "./components/Button"
+import Menu from "./components/Menu"
 
 export default function App() {
     return (
-        <div className="layout">
-            <Nav />
-            <header className="top-bar">Top-bar</header>
-            <aside className="sidebar-left">Sidebar Left</aside>
-            <header className="header">Header</header>
-            <main className="main">
-                Main
-                <br />
-                Main
-                <br />
-                Main
-                <br />
-                Main
-                <br />
-                Main
-                <br />
-                Main
-                <br />
-                Main
-                <br />
-                Main
-                <br />
-                Main
-                <br />
-                Main
-                <br />
-                Main
-                <br />
-                Main
-                <br />
-                Main
-                <br />
-                Main
-                <br />
-                Main
-                <br />
-                Main
-                <br />
-                Main
-                <br />
-                Main
-                <br />
-                Main
-                <br />
-                Main
-                <br />
-                Main
-                <br />
-                Main
-                <br />
-                Main
-                <br />
-                Main
-                <br />
-                Main
-                <br />
-                Main
-                <br />
-                Main
-                <br />
-                Main
-                <br />
-                Main
-                <br />
-                Main
-                <br />
-                Main
-                <br />
-            </main>
-            <footer className="footer">Footer</footer>
-            <SidebarRight />
+        <div>
+            <Button>Menu</Button>
+            <Menu>
+                <Menu.Title>Account</Menu.Title>
+                <Menu.Item>View Profile</Menu.Item>
+                <Menu.Item>Settings</Menu.Item>
+                <Menu.Divider />
+                <Menu.Item>Show keyboard shortcuts</Menu.Item>
+                <Menu.Item>Help &amp; Support</Menu.Item>
+                <Menu.Item>API</Menu.Item>
+                <Menu.Divider />
+                <Menu.Item>Sign out</Menu.Item>
+            </Menu>
         </div>
     )
 }
