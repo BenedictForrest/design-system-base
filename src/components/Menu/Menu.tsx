@@ -1,4 +1,5 @@
-import { ReactNode } from "react"
+import { uniqueId } from "lodash"
+import { ReactNode, useState } from "react"
 import { MenuDivider } from "./MenuDivider"
 import { MenuItem } from "./MenuItem"
 import { MenuTitle } from "./MenuTitle"
@@ -9,7 +10,13 @@ interface MenuProps {
 }
 
 function Menu({ children }: MenuProps) {
-    return <div>{children}</div>
+    const [menuID] = useState(uniqueId("menu-"))
+
+    return (
+        <ul id={menuID} className="menu" role="menu">
+            {children}
+        </ul>
+    )
 }
 
 Menu.Item = MenuItem

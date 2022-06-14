@@ -5,5 +5,9 @@ interface MenuItemProps {
 }
 
 export function MenuItem({ children }: MenuItemProps) {
-    return <div>{children}</div>
+    return (
+        <li className="menu-item" role="menuitem" tabIndex={0}>
+            {children}
+        </li>
+    )
 }

@@ -5,5 +5,9 @@ interface MenuTitleProps {
 }
 
 export function MenuTitle({ children }: MenuTitleProps) {
-    return <div className="menu-title">{children}</div>
+    return (
+        <li className="menu-title" role="presentation">
+            {children}
+        </li>
+    )
 }

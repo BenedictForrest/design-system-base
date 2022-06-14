@@ -1,3 +1,3 @@
 export function MenuDivider() {
-    return <div>Divider</div>
+    return <li role="separator" className="menu-divider" />
 }

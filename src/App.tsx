@@ -1,9 +1,10 @@
 import Button from "./components/Button"
 import Menu from "./components/Menu"
+import MenuButton from "./components/MenuButton/MenuButton"
 
 export default function App() {
     return (
-        <div>
+        <MenuButton>
             <Button>Menu</Button>
             <Menu>
                 <Menu.Title>Account</Menu.Title>
@@ -16,6 +17,6 @@ export default function App() {
                 <Menu.Divider />
                 <Menu.Item>Sign out</Menu.Item>
             </Menu>
-        </div>
+        </MenuButton>
     )
 }
