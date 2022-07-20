@@ -1,5 +1,5 @@
-import { uniqueId } from "lodash"
-import { ReactNode, useState } from "react"
+import { ReactNode, useContext } from "react"
+import { MenuButtonContext } from "../MenuButton/MenuButtonContext"
 import { MenuDivider } from "./MenuDivider"
 import { MenuItem } from "./MenuItem"
 import { MenuTitle } from "./MenuTitle"
@@ -10,10 +10,10 @@ interface MenuProps {
 }
 
 function Menu({ children }: MenuProps) {
-    const [menuID] = useState(uniqueId("menu-"))
+    const { menuProps } = useContext(MenuButtonContext)
 
     return (
-        <ul id={menuID} className="menu" role="menu">
+        <ul {...menuProps} className="menu" role="menu">
             {children}
         </ul>
     )

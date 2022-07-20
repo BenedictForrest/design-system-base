@@ -1,9 +1,9 @@
-import { createContext } from "react"
+import { createContext, OlHTMLAttributes } from "react"
 
 export interface MenuButtonContextProps {
-    menuId: string
+    menuProps: OlHTMLAttributes<HTMLUListElement>
 }
 
 export const MenuButtonContext = createContext<MenuButtonContextProps>({
-    menuId: "",
+    menuProps: {},
 })
