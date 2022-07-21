@@ -14,8 +14,8 @@ export default function NavSection({ id, name }: NavSectionProps) {
             <h3 className="nav-title">{name}</h3>
             {categories.length && (
                 <ul className="nav-list">
-                    {categories.map(({ id, name }) => {
-                        return <NavCategory id={id} name={name} />
+                    {categories.map(({ id, name }, index) => {
+                        return <NavCategory id={id} key={index} name={name} />
                     })}
                 </ul>
             )}

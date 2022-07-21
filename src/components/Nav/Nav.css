@@ -1,6 +1,11 @@
 .nav {
+    color: #666666;
     display: flex;
     flex-direction: column;
+    font-size: 0.875rem;
+    font-weight: 500;
+    line-height: 1.25rem;
+    max-inline-size: 17.5rem;
     row-gap: 1.25rem;
 }
 
@@ -14,7 +19,6 @@
     color: #000000;
     font-size: 1rem;
     font-weight: 600;
-    letter-spacing: -0.02em;
     line-height: 1.5rem;
     margin-block-start: 0;
     margin-block-end: 0;
@@ -28,7 +32,9 @@
 }
 
 .nav-list .nav-list {
-    padding-inline-start: 1.5rem;
+    border-inline-start: thin solid #ebebeb;
+    margin-inline-start: 0.5625rem;
+    padding-inline-start: 0.875rem;
 }
 
 .nav-list-item {
@@ -39,18 +45,61 @@
 }
 
 .nav-toggle {
+    align-items: center;
+    block-size: 1.25rem;
     border-radius: 0.1875rem;
+    display: flex;
     fill: #999999;
-    padding: 0.25rem;
+    inline-size: 1.25rem;
+    justify-content: center;
+    outline: none;
 }
 .nav-toggle:hover {
     background-color: #f5f5f5;
+    fill: #666666;
+}
+.nav-toggle:focus-visible {
+    box-shadow: inset 0 0 0 0.0625rem rgba(102, 51, 185, 1),
+        0 0 0 0.1875rem rgba(102, 51, 185, 0.2);
+}
+
+.nav-icon {
+    block-size: 0.75rem;
+    inline-size: 0.75rem;
+}
+.nav-toggle[aria-expanded="true"] .nav-icon {
+    transform: rotate(90deg);
 }
 
 .nav-link {
-    color: #333333;
-    font-size: 0.875rem;
-    line-height: 1.25rem;
+    border-radius: 0.1875rem;
+    outline: none;
     padding-inline-start: 0.25rem;
     padding-inline-end: 0.25rem;
+    position: relative;
+}
+.nav-link:hover {
+    color: #333333;
+}
+.nav-link:focus-visible {
+    box-shadow: inset 0 0 0 0.0625rem rgba(102, 51, 185, 1),
+        0 0 0 0.1875rem rgba(102, 51, 185, 0.2);
+}
+.nav-link[aria-current="page"] {
+    color: rgba(102, 51, 185, 1);
+    font-weight: 600;
+}
+.nav-link-article[aria-current="page"]::before {
+    border-inline-start: thin solid rgba(102, 51, 185, 1);
+    content: "";
+    display: block;
+    inset-block-start: 0;
+    inset-block-end: 0;
+    inset-inline-start: -0.9375rem;
+    pointer-events: none;
+    position: absolute;
+}
+
+.nav-empty {
+    color: #999999;
 }

@@ -10,14 +10,29 @@ const categories: CategoryProps[] = [
         name: "Getting Started",
     },
     {
-        id: "start-here",
+        id: "14673-start-here",
         name: "Start Here",
         parentCategoryId: "getting-started",
     },
     {
-        id: "features",
+        id: "14674-features",
         name: "Features",
-        parentCategoryId: "start-here",
+        parentCategoryId: "14673-start-here",
+    },
+    {
+        id: "terminology",
+        name: "Terminology",
+        parentCategoryId: "14673-start-here",
+    },
+    {
+        id: "getting-the-most-out-of-elevio",
+        name: "Getting the most out of Elevio",
+        parentCategoryId: "14673-start-here",
+    },
+    {
+        id: "trialling-elevio?",
+        name: "Trialling Elevio?",
+        parentCategoryId: "14673-start-here",
     },
     {
         id: "setting-things-up",
